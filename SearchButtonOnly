@@ -1,0 +1,40 @@
+import React from 'react';
+import '../App.css';
+
+class Search extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      location: ''
+    }
+  }
+
+  handleClick(){
+    this.props.fetchData(this.state.location);
+  }
+
+  getValue(evt){
+    this.state.location = evt.target.value;
+  }
+
+  render(){
+
+    return (
+
+      <div id="search">
+        <input type="text" placeholder="Type a city name here..."  onChange={this.getValue.bind(this)} />
+        <input type="submit" value="GO" onClick={ this.handleClick.bind(this) }  />
+        <br />
+        <br />
+      </div>
+
+    )
+
+  };
+
+}
+
+export default Search;
+
+#rgba(255,255,255,0.2
