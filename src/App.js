@@ -17,7 +17,7 @@ class App extends React.Component {
   fetchData(city) {
 
     var location = encodeURIComponent(city);
-    var urlPrefix = 'https://api.openweathermap.org/data/2.5/forecast?q=';
+    var urlPrefix = 'http://api.openweathermap.org/data/2.5/forecast?q=';
     var urlSuffix = '&APPID=a28ad46755d6e0b7f41ced42a6a94b71&units=imperial';
     var url = urlPrefix + location + urlSuffix;
 
